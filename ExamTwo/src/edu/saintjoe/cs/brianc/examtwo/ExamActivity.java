@@ -39,7 +39,7 @@ public class ExamActivity extends Form implements HandlesEventDispatching {
      inputBox = new TextBox(line1);
      inputBox.NumbersOnly(true);
    
-     incButton = new Button(line2,"Increment it:"); 
+     incButton = new Button(line2,"Double It"); 
      
      resultLabel = new Label(line3,"");
      
@@ -54,7 +54,7 @@ public class ExamActivity extends Form implements HandlesEventDispatching {
  	
 	    if (component.equals(incButton) && eventName.equals("Click")){
 	    	temp = Integer.parseInt(inputBox.Text());
-	    	temp += 1;
+	    	temp = temp * 2;
 	    	resultLabel.Text(String.valueOf(temp));
 	        return true;
 	     } 
